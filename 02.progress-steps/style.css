@@ -1,0 +1,82 @@
+:root{
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    font-family: "Muli", sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    position: relative; /* 很奇怪，去掉此属性，下面的before伪类的长度会撑满整个窗口 */
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+.progress-container::before{
+    content: "";
+    height: 4px;
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+.progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle{
+    background-color: #fff;
+    color:#999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: 0.4s ease;
+}
+
+.circle.active{
+    border-color: var(--line-border-fill);
+}
+
+.btn{
+     border: 0;
+     border-radius: 6px;
+     background-color: var(--line-border-fill);
+     color: #fff;
+     font-size: 14px;
+     padding: 8px 30px;
+     margin: 5px;
+}

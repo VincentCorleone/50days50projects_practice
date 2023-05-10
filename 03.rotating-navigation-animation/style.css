@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #333;
+}
+
+.container{
+    background-color: #fafafa;
+    padding: 50px;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.container.show-nav .circle-container{
+    transform: rotate(-70deg);
+}
+
+.circle-container{
+    transition: transform 0.5s linear;
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    background-color: #ff7979;
+    color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+}
+
+.circle-container button{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border: 0;
+}
+
+.circle-container button#open{
+}
+
+.circle-container button#close{
+    transform-origin: top left;
+    transform: rotate(90deg);
+}
+
+.content img{
+    max-width: 100%;
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+
+nav li{
+    padding: 10px;
+}
+
+.container.show-nav + nav li{
+    transform: translateX(0%);
+    margin-left: 50px;
+}
+
+nav li{
+    transform: translateX(-100%);
+    transition: transform 0.3s linear;
+}
+
+.container.show-nav + nav li + li{
+    margin-left: 75px;
+}
+
+
+.container.show-nav + nav li + li + li{
+    margin-left: 100px;
+}

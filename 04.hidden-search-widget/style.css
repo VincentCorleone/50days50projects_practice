@@ -38,9 +38,6 @@ button{
     outline: none;
 }
 
-button.active{
-    transform: translate(0);
-}
 
 input.active{
     width: 200px;

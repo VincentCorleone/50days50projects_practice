@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Muli', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container{
+    width: 600px;
+}
+
+.faq{
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq .content{
+    display: none;
+    margin-bottom: 0;
+}
+
+.faq.active{
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active .content{
+    display: block;
+}
+
+.faq h3{
+    margin: 0 35px 0 0;
+}
+
+.faq.active::before,
+.faq.active::after{
+    content: "\f075";
+    color: #2ecc71;
+    font-size: 7rem;
+    font-family: 'Font Awesome 5 free';
+    opacity: 0.2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.faq.active::after{
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.faq button{
+    border: 0;
+    background: transparent;
+    position:absolute;
+    right: 30px;
+    top:35px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.faq button .fa-circle-xmark{
+    display: none;
+}
+
+.faq.active button .fa-chevron-down{
+    display: none;
+}
+
+.faq.active button .fa-circle-xmark{
+    display: block;
+}
+

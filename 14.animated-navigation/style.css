@@ -77,12 +77,10 @@ nav ul a{
     padding: 0;
     position: relative;
     height: 30px;
-    height: 30px;
+    width: 30px;
 }
 
-.icon:focus {
-    outline: 0;
-  }
+
 
 .icon .line{
     background-color: #5290f9;
@@ -100,9 +98,9 @@ nav ul a{
 }
 
 nav.active .icon .line1{
-    transform: rotate(-765deg) translate(5.5px);
+    transform: rotate(-765deg) translateY(5.5px);
 }
 
 nav.active .icon .line2{
-    transform: rotate(765deg) translate(-5.5px);
+    transform: rotate(765deg) translateY(-5.5px);
 }

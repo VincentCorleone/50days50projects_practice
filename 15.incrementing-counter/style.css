@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(133,76,168);
+    color: white;
+}
+
+.counter-container {
+    margin: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter{
+    margin-top: 10px;
+    font-size: 60px;
+}
+
+
+
